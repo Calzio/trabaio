@@ -12,23 +12,28 @@ public class Paciente {
     private int id; 
     private String nome; 
     private String cpf; 
-    private int telefone; 
+    private String telefone; 
+    private String Relatorio;
     
     public Paciente() {
 }
-    
-    public Paciente(String nome, String cpf, int telefone) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.telefone = telefone;
-    }
-    
-    public Paciente(int id, String nome, String cpf, int telefone) {
-        this.nome = nome;
+
+    public Paciente(int id, String nome, String cpf, String telefone, String Relatorio) {
         this.id = id;
+        this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
+        this.Relatorio = Relatorio;
     }
+
+    public Paciente(String nome, String cpf, String telefone, String Relatorio) {
+        this.nome = nome;
+        this.cpf = cpf;
+        this.telefone = telefone;
+        this.Relatorio = Relatorio;
+    }
+
+  
 
     public int getId() {
         return id;
@@ -54,13 +59,23 @@ public class Paciente {
         this.cpf = cpf;
     }
 
-    public int getTelefone() {
+    public String getTelefone() {
         return telefone;
     }
 
-    public void setTelefone(int telefone) {
+    public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public String getRelatorio() {
+        return Relatorio;
+    }
+
+    public void setRelatorio(String Relatorio) {
+        this.Relatorio = Relatorio;
+    }
+    
+   
 
     
 }
