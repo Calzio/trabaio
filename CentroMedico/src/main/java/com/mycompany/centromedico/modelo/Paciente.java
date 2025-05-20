@@ -74,6 +74,11 @@ public class Paciente {
     public void setRelatorio(String Relatorio) {
         this.Relatorio = Relatorio;
     }
+
+    @Override
+    public String toString() {
+        return "Paciente" + "id: " + id + " nome " + nome + " cpf " + cpf + " telefone " + telefone + " Relatorio " + Relatorio;
+    }
     
    
 

@@ -87,7 +87,8 @@ public class TelaPaciente extends javax.swing.JFrame {
                         .addGap(29, 29, 29)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jFormattedTextField2)
-                            .addComponent(jFormattedTextField4)))
+                            .addComponent(jFormattedTextField4)
+                            .addComponent(jFormattedTextField3)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -102,9 +103,8 @@ public class TelaPaciente extends javax.swing.JFrame {
                                 .addComponent(jTextField1))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addComponent(jLabel3)
-                                .addGap(18, 18, 18)
-                                .addComponent(jFormattedTextField3)))))
-                .addGap(179, 179, 179))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addGap(176, 176, 176))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
