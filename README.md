@@ -1,6 +1,6 @@
 ## Banco de dados
 
-CREATE SCHEMA IF NOT EXISTS cadastro;
+CREATE SCHEMA IF NOT EXISTS cadastro; //evitar erro caso o banco de dados já exista
 
 USE cadastro;
 
