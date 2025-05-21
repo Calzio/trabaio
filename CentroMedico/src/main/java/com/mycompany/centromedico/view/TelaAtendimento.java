@@ -46,17 +46,17 @@ public class TelaAtendimento extends javax.swing.JFrame {
         tbLista.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         tbLista.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null},
-                {null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "ID", "NOME", "HORARIO", "IDADE"
+                "ID", "NOME", "HORARIO", "IDADE", "DATA"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false
+                false, false, false, false, true
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {

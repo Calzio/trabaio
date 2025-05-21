@@ -13,24 +13,24 @@ public class Paciente {
     private String nome; 
     private String cpf; 
     private String telefone; 
-    private String Relatorio;
+    private String relatorio;
     
     public Paciente() {
 }
 
-    public Paciente(int id, String nome, String cpf, String telefone, String Relatorio) {
+    public Paciente(int id, String nome, String cpf, String telefone, String relatorio) {
         this.id = id;
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
-        this.Relatorio = Relatorio;
+        this.relatorio = relatorio;
     }
 
-    public Paciente(String nome, String cpf, String telefone, String Relatorio) {
+    public Paciente(String nome, String cpf, String telefone, String relatorio) {
         this.nome = nome;
         this.cpf = cpf;
         this.telefone = telefone;
-        this.Relatorio = Relatorio;
+        this.relatorio = relatorio;
     }
 
   
@@ -67,17 +67,17 @@ public class Paciente {
         this.telefone = telefone;
     }
 
-    public String getRelatorio() {
-        return Relatorio;
+    public String getrelatorio() {
+        return relatorio;
     }
 
-    public void setRelatorio(String Relatorio) {
-        this.Relatorio = Relatorio;
+    public void setrelatorio(String relatorio) {
+        this.relatorio = relatorio;
     }
 
     @Override
     public String toString() {
-        return "Paciente" + "id: " + id + " nome " + nome + " cpf " + cpf + " telefone " + telefone + " Relatorio " + Relatorio;
+        return "Paciente" + "id: " + id + " nome " + nome + " cpf " + cpf + " telefone " + telefone + " relatorio " + relatorio;
     }
     
    

@@ -16,5 +16,6 @@ public class ConexaoMySQL {
     public static Connection getConexaoMySQL() throws SQLException {
         return DriverManager.getConnection(URL, USUARIO, SENHA);
     }
+    
 }
 
