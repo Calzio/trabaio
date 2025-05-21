@@ -4,7 +4,7 @@
  */
 package com.mycompany.centromedico.view;
 import com.mycompany.centromedico.view.TelaPaciente;
-import com.mycompany.centromedico.view.TelaMedico;
+
 
 /**
  *

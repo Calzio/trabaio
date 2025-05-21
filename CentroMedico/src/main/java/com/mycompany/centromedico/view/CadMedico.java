@@ -44,7 +44,7 @@ public class CadMedico extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        txtNome = new javax.swing.JTextField();
+        txtNomeMedico = new javax.swing.JTextField();
         txtEspecialidade = new javax.swing.JTextField();
         txtCrm = new javax.swing.JTextField();
         txtBuscar = new javax.swing.JTextField();
@@ -55,6 +55,7 @@ public class CadMedico extends javax.swing.JFrame {
         btnLimpar = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         tbLista = new javax.swing.JTable();
+        btnVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -69,9 +70,9 @@ public class CadMedico extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jLabel3.setText("CRM:");
 
-        txtNome.addActionListener(new java.awt.event.ActionListener() {
+        txtNomeMedico.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtNomeActionPerformed(evt);
+                txtNomeMedicoActionPerformed(evt);
             }
         });
 
@@ -91,7 +92,7 @@ public class CadMedico extends javax.swing.JFrame {
         jLabel5.setText("BUSCAR:");
 
         btnEntrar.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
-        btnEntrar.setText("ENTRAR");
+        btnEntrar.setText("CADASTRAR");
         btnEntrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnEntrarActionPerformed(evt);
@@ -144,26 +145,17 @@ public class CadMedico extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(tbLista);
 
+        btnVoltar.setText("Voltar");
+        btnVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVoltarActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(txtCrm, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
-                    .addComponent(txtNome)
-                    .addComponent(txtEspecialidade))
-                .addGap(121, 121, 121)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(54, 54, 54)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -177,14 +169,37 @@ public class CadMedico extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnLimpar)))
                 .addGap(38, 38, 38))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(txtCrm, javax.swing.GroupLayout.DEFAULT_SIZE, 137, Short.MAX_VALUE)
+                            .addComponent(txtNomeMedico)
+                            .addComponent(txtEspecialidade))
+                        .addGap(121, 121, 121)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5)
+                            .addComponent(txtBuscar, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(btnVoltar)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(71, 71, 71)
+                .addContainerGap()
+                .addComponent(btnVoltar)
+                .addGap(42, 42, 42)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txtNomeMedico, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel5))
                 .addGap(7, 7, 7)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -226,9 +241,9 @@ public class CadMedico extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void txtNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeActionPerformed
+    private void txtNomeMedicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNomeMedicoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_txtNomeActionPerformed
+    }//GEN-LAST:event_txtNomeMedicoActionPerformed
 
     private void txtEspecialidadeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEspecialidadeActionPerformed
         // TODO add your handling code here:
@@ -239,7 +254,7 @@ public class CadMedico extends javax.swing.JFrame {
     }//GEN-LAST:event_txtCrmActionPerformed
 
     private void btnEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEntrarActionPerformed
-        String nome = txtNome.getText();
+        String nome = txtNomeMedico.getText();
         String especialidade = txtEspecialidade.getText();
         String crm = txtCrm.getText();
 
@@ -263,7 +278,7 @@ public class CadMedico extends javax.swing.JFrame {
             return;
         }
 
-        String novoNome = txtNome.getText();
+        String novoNome = txtNomeMedico.getText();
         String novaEspecialidade = txtEspecialidade.getText();
         String novaCRM = txtCrm.getText();
 
@@ -273,7 +288,7 @@ public class CadMedico extends javax.swing.JFrame {
         }
 
         try {
-            int novaIdade = Integer.parseInt(novaCRM);
+            int novaCrm = Integer.parseInt(novaCRM);
 
             // Atualiza a lista
             ArrayList<Medico> lista = controle.listar();
@@ -300,7 +315,7 @@ public class CadMedico extends javax.swing.JFrame {
 
         //CASO NÃO SELECIONE A LINHA
         if (linha == -1) {
-            JOptionPane.showMessageDialog(null, "Selecione uma pessoa para remover.");
+            JOptionPane.showMessageDialog(null, "Selecione um médico para remover.");
             return;
 
         }
@@ -309,14 +324,23 @@ public class CadMedico extends javax.swing.JFrame {
         Lista.remove(linha);
         atualizarTabela();
         LimparCampos();
-        JOptionPane.showMessageDialog(null, "Animal removido com sucesso");
+        JOptionPane.showMessageDialog(null, "médico  removido com sucesso");
     }//GEN-LAST:event_btnRemoverActionPerformed
 
     private void btnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimparActionPerformed
-        txtNome.setText("");
+        txtNomeMedico.setText("");
         txtEspecialidade.setText("");
         txtCrm.setText("");
     }//GEN-LAST:event_btnLimparActionPerformed
+
+    private void btnVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVoltarActionPerformed
+        // TODO add your handling code here:
+        TelaEscolha e = new TelaEscolha();
+        e.setVisible(true);
+        dispose();
+        
+    
+    }//GEN-LAST:event_btnVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -358,6 +382,7 @@ public class CadMedico extends javax.swing.JFrame {
     private javax.swing.JButton btnEntrar;
     private javax.swing.JButton btnLimpar;
     private javax.swing.JButton btnRemover;
+    private javax.swing.JButton btnVoltar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -368,7 +393,7 @@ public class CadMedico extends javax.swing.JFrame {
     private javax.swing.JTextField txtBuscar;
     private javax.swing.JTextField txtCrm;
     private javax.swing.JTextField txtEspecialidade;
-    private javax.swing.JTextField txtNome;
+    private javax.swing.JTextField txtNomeMedico;
     // End of variables declaration//GEN-END:variables
 
     private void atualizarTabela() {
