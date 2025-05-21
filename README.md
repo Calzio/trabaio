@@ -1,14 +1,15 @@
 ## Banco de dados
 
-create Schema cadastro;
+CREATE SCHEMA IF NOT EXISTS cadastro;
 
-use cadastro;
+USE cadastro;
 
 CREATE TABLE Paciente (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
     cpf VARCHAR(11) NOT NULL UNIQUE,
-    telefone VARCHAR(15)
+    telefone VARCHAR(15),
+    relatorio VARCHAR(140)
 );
 
 CREATE TABLE Medico (
@@ -28,3 +29,4 @@ CREATE TABLE Consulta (
     FOREIGN KEY (id_paciente) REFERENCES Paciente(id),
     FOREIGN KEY (id_medico) REFERENCES Medico(id)
 );
+
