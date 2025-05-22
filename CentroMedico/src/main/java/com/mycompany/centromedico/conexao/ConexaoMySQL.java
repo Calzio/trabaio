@@ -14,8 +14,22 @@ public class ConexaoMySQL {
     private static final String SENHA = "";
 
     public static Connection getConexaoMySQL() throws SQLException {
-        return DriverManager.getConnection(URL, USUARIO, SENHA);
+    return DriverManager.getConnection(URL, USUARIO, SENHA);
     }
     
+    public static Connection conectar() {
+        try {
+            return DriverManager.getConnection(
+                "jdbc:mysql://localhost:3306/cadastro", "usuario", "senha"
+            );
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao conectar com o banco de dados", e);
+        }
+    }
+
+    public static Connection getConnection() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 }
+
 
